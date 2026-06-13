@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="ACM UbiComp / ISWC 2026 tutorial on open datasets, benchmarks, and practical resources for multi-modal sensing."
+  />
+  <title>Multi-Modal Sensing Tutorial | UbiComp / ISWC 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">UbiComp / ISWC 2026 Tutorial</a>
+      <nav aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#program">Program</a>
+        <a href="#materials">Materials</a>
+        <a href="#organizers">Organizers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">ACM UbiComp / ISWC 2026 · Half-day Tutorial</p>
+          <h1>Towards Open-Sourced Datasets, Benchmarks, and Platforms for Multi-Modal Sensing</h1>
+          <p class="hero-copy">
+            A structured and hands-on introduction to open datasets, benchmark design,
+            multi-modal learning, and practical resources for ubiquitous sensing.
+          </p>
+
+          <div class="hero-actions">
+            <!-- TODO: Replace # with the official registration link when available. -->
+            <a class="button primary" href="#participation">Participation details</a>
+            <a class="button secondary" href="#program">View program</a>
+          </div>
+
+          <div class="quick-facts" aria-label="Tutorial quick facts">
+            <div>
+              <span class="fact-label">Format</span>
+              <strong>3-hour tutorial</strong>
+            </div>
+            <div>
+              <span class="fact-label">Date</span>
+              <strong>To be announced</strong>
+            </div>
+            <div>
+              <span class="fact-label">Venue</span>
+              <strong>ACM UbiComp / ISWC 2026</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Covered sensing modalities">
+          <p class="card-kicker">Modalities covered</p>
+          <div class="modality-grid">
+            <span>Wi-Fi CSI</span>
+            <span>mmWave</span>
+            <span>RFID</span>
+            <span>Acoustic</span>
+            <span>Thermal</span>
+            <span>ToF</span>
+            <span>IMU</span>
+            <span>RGB-D</span>
+          </div>
+          <p class="hero-card-note">
+            From signal characteristics and privacy trade-offs to fusion,
+            cross-modal learning, and benchmark evaluation.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="overview" class="section">
+      <div class="container narrow">
+        <p class="section-label">Overview</p>
+        <h2>Why this tutorial?</h2>
+        <p class="lead">
+          Ubiquitous computing is moving from bespoke, single-sensor systems toward
+          robust multi-modal perception. Newly released datasets and benchmarks are
+          making it possible to compare sensing modalities, reproduce results, and
+          develop more generalizable models.
+        </p>
+        <p>
+          This tutorial combines concise lectures, live sensor demonstrations,
+          interactive checkpoints, and a guided Python/PyTorch notebook session.
+          Participants will learn how to compare datasets fairly, select suitable
+          evaluation protocols, and run unimodal and multi-modal baselines through
+          a common workflow.
+        </p>
+      </div>
+    </section>
+
+    <section class="section muted">
+      <div class="container">
+        <p class="section-label">What you will learn</p>
+        <h2>From sensing signals to reproducible benchmarks</h2>
+
+        <div class="cards four">
+          <article class="card">
+            <span class="card-number">01</span>
+            <h3>Sensing primer</h3>
+            <p>
+              Compare signal characteristics, hardware cost, deployment constraints,
+              and privacy trade-offs across RF, acoustic, thermal, ToF, and IMU sensing.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-number">02</span>
+            <h3>Dataset landscape</h3>
+            <p>
+              Navigate MM-Fi, OctoNet, XRF55, mRI, OPERAnet, and other representative
+              resources using a common comparison framework.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-number">03</span>
+            <h3>Learning paradigms</h3>
+            <p>
+              Understand early, intermediate, late, and attention-based fusion,
+              cross-modal supervision, missing-modality robustness, and sensor foundation models.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-number">04</span>
+            <h3>Hands-on practice</h3>
+            <p>
+              Run and interpret prepared baselines, enable fusion, change or mask a modality,
+              and evaluate performance in a guided notebook.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="program" class="section">
+      <div class="container">
+        <p class="section-label">Representative program</p>
+        <h2>Three hours of lectures, interaction, and practice</h2>
+        <p class="section-intro">
+          The exact start time will follow the official UbiComp / ISWC 2026 schedule.
+        </p>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <time>00:00–00:10</time>
+            <div>
+              <h3>Opening</h3>
+              <p>Motivation, scope, learning goals, and tutorial format.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time>00:10–00:40</time>
+            <div>
+              <h3>Module I · Sensing modalities primer</h3>
+              <p>
+                RF, acoustic, thermal, ToF, and inertial sensing, followed by a
+                short signal-inspection checkpoint and live sensor demonstrations.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time>00:40–01:10</time>
+            <div>
+              <h3>Module II · Datasets and benchmarks</h3>
+              <p>
+                Cross-dataset comparison covering modalities, tasks, scale, labels,
+                synchronization, licensing, and evaluation protocols, followed by
+                a dataset-selection exercise.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item break">
+            <time>01:10–01:25</time>
+            <div>
+              <h3>Coffee break and demo browsing</h3>
+              <p>Informal Q&amp;A and hands-on exploration of representative sensors.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time>01:25–02:00</time>
+            <div>
+              <h3>Module III · Models and learning paradigms</h3>
+              <p>
+                Per-modality encoders, fusion strategies, cross-modal learning,
+                missing-modality robustness, and a model-comparison checkpoint.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item emphasis">
+            <time>02:00–02:45</time>
+            <div>
+              <h3>Module IV · Guided hands-on benchmark</h3>
+              <p>
+                Load prepared samples, run a baseline, enable fusion, mask or swap
+                a modality, and interpret benchmark metrics using a dataset-agnostic notebook.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time>02:45–03:00</time>
+            <div>
+              <h3>Closing panel</h3>
+              <p>Open research questions, community wishlist, and Q&amp;A.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="materials" class="section muted">
+      <div class="container">
+        <p class="section-label">Open tutorial materials</p>
+        <h2>Designed for reuse after the conference</h2>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>Hands-on notebook</h3>
+            <p>
+              A self-contained Jupyter/Colab notebook with prepared samples,
+              pretrained checkpoints, modality adapters, fusion, and evaluation.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Dataset comparison toolkit</h3>
+            <p>
+              A cross-dataset comparison matrix, dataset-selection checklist,
+              licensing references, and common evaluation template.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Slides and reading list</h3>
+            <p>
+              Public slides and a curated reading list covering datasets,
+              benchmark design, fusion, cross-modal learning, and sensing models.
+            </p>
+          </article>
+        </div>
+
+        <div class="notice">
+          <strong>Materials status:</strong>
+          Tutorial resources are under preparation and will be released before the conference.
+        </div>
+      </div>
+    </section>
+
+    <section id="participation" class="section">
+      <div class="container split">
+        <div>
+          <p class="section-label">Who should attend?</p>
+          <h2>Open to newcomers and active researchers</h2>
+          <p>
+            The tutorial is intended for graduate students, postdoctoral researchers,
+            faculty members, and industry researchers or engineers working in ubiquitous
+            computing, mobile and wearable sensing, HCI, signal processing, and applied
+            machine learning.
+          </p>
+        </div>
+
+        <div class="participation-box">
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Working knowledge of Python and a framework such as PyTorch</li>
+            <li>Basic familiarity with signal processing and machine learning</li>
+            <li>No prior experience with a specific sensing modality is required</li>
+          </ul>
+
+          <h3>What to bring</h3>
+          <p>
+            A laptop with Python 3.10+, PyTorch, and approximately 5 GB of free disk space.
+            A fully runnable Google Colab version will also be provided.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="organizers" class="section dark">
+      <div class="container">
+        <p class="section-label light">Organizers</p>
+        <h2>The University of Hong Kong</h2>
+
+        <div class="organizer-grid">
+          <article class="organizer">
+            <div class="avatar" aria-hidden="true">XZ</div>
+            <div>
+              <h3><a href="https://zhang-xie.github.io/" target="_blank" rel="noreferrer">Xie Zhang</a></h3>
+              <p>Spatial sensing intelligence and privacy-preserving multi-modal sensing.</p>
+            </div>
+          </article>
+
+          <article class="organizer">
+            <div class="avatar" aria-hidden="true">WH</div>
+            <div>
+              <h3><a href="https://houwayne.github.io/" target="_blank" rel="noreferrer">Weiying Hou</a></h3>
+              <p>Wireless sensing systems and low-altitude technologies.</p>
+            </div>
+          </article>
+
+          <article class="organizer">
+            <div class="avatar" aria-hidden="true">CW</div>
+            <div>
+              <h3><a href="https://www.cswu.me/" target="_blank" rel="noreferrer">Chenshu Wu</a></h3>
+              <p>AIoT, wireless sensing, mobile systems, and ubiquitous computing.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <p>ACM UbiComp / ISWC 2026 Tutorial</p>
+      <p>
+        Hosted by the
+        <a href="https://aiot-lab.github.io/" target="_blank" rel="noreferrer">HKU AIoT Lab</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

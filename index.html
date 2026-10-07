@@ -17,12 +17,15 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#top">UbiComp / ISWC 2026 Tutorial</a>
+      <a class="brand" href="#top">
+        <img class="brand-logo" src="logo/Ubicomp_2026_logo.png" alt="UbiComp / ISWC 2026" />
+        <span>UbiComp / ISWC 2026 Tutorial</span>
+      </a>
       <nav aria-label="Primary navigation">
         <a href="#overview">Overview</a>
         <a href="#program">Program</a>
         <a href="#materials">Materials</a>
-        <a href="#organizers">Organizers</a>
+        <a href="#organizers">People</a>
       </nav>
     </div>
   </header>
@@ -51,30 +54,44 @@
             </div>
             <div>
               <span class="fact-label">Date</span>
-              <strong>To be announced</strong>
+              <strong>Oct 11, 2026 · Afternoon</strong>
             </div>
             <div>
               <span class="fact-label">Venue</span>
-              <strong>ACM UbiComp / ISWC 2026</strong>
+              <strong>Room 5I, Floor 5F</strong>
             </div>
           </div>
         </div>
 
         <aside class="hero-card" aria-label="Covered sensing modalities">
           <p class="card-kicker">Modalities covered</p>
+          <div class="modality-stats" aria-label="Dataset modality counts">
+            <div>
+              <strong>12</strong>
+              <span>OctoNet</span>
+            </div>
+            <div>
+              <strong>5</strong>
+              <span>RF-Behavior</span>
+            </div>
+          </div>
           <div class="modality-grid">
-            <span>Wi-Fi CSI</span>
-            <span>mmWave</span>
-            <span>RFID</span>
-            <span>Acoustic</span>
-            <span>Thermal</span>
-            <span>ToF</span>
-            <span>IMU</span>
             <span>RGB-D</span>
+            <span>Thermal</span>
+            <span>IRA</span>
+            <span>ToF</span>
+            <span>mmWave</span>
+            <span>UWB</span>
+            <span>Wi-Fi CSI</span>
+            <span>Acoustic</span>
+            <span>IMU</span>
+            <span>RFID</span>
+            <span>LoRa</span>
+            <span>MoCap</span>
           </div>
           <p class="hero-card-note">
-            From signal characteristics and privacy trade-offs to fusion,
-            cross-modal learning, and benchmark evaluation.
+            OctoNet: 12 heterogeneous modalities with MoCap pose labels.
+            RF-Behavior: 5 synchronized streams—radar, LoRa, RFID, IMU, and MoCap.
           </p>
         </aside>
       </div>
@@ -86,16 +103,16 @@
         <h2>Why this tutorial?</h2>
         <p class="lead">
           Ubiquitous computing is moving from bespoke, single-sensor systems toward
-          robust multi-modal perception. Newly released datasets and benchmarks are
-          making it possible to compare sensing modalities, reproduce results, and
-          develop more generalizable models.
+          robust multi-modal perception. Open datasets, shared platforms, and model
+          designs—white-box, physics-informed, and signal-processing–learning
+          co-design—are making it possible to compare modalities, reproduce results,
+          and build reusable sensing pipelines.
         </p>
         <p>
-          This tutorial combines concise lectures, live sensor demonstrations,
-          interactive checkpoints, and a guided Python/PyTorch notebook session.
-          Participants will learn how to compare datasets fairly, select suitable
-          evaluation protocols, and run unimodal and multi-modal baselines through
-          a common workflow.
+          This tutorial combines concise lectures with deep dives into OctoNet,
+          RF-Behavior, and OctoSense, then three sensing model paradigms
+          (RF-CRATE, TAP3D, RF-LEGO), plus a guided notebook session on
+          streaming download, modality loading, and visualization.
         </p>
       </div>
     </section>
@@ -103,33 +120,33 @@
     <section class="section muted">
       <div class="container">
         <p class="section-label">What you will learn</p>
-        <h2>From sensing signals to reproducible benchmarks</h2>
+        <h2>From open datasets to reusable sensing models</h2>
 
         <div class="cards four">
           <article class="card">
             <span class="card-number">01</span>
-            <h3>Sensing primer</h3>
+            <h3>Dataset landscape</h3>
             <p>
-              Compare signal characteristics, hardware cost, deployment constraints,
-              and privacy trade-offs across RF, acoustic, thermal, ToF, and IMU sensing.
+              Compare multi-modal sensing resources—how they differ in modalities,
+              tasks, and complementarity—with deep dives into OctoNet and RF-Behavior.
             </p>
           </article>
 
           <article class="card">
             <span class="card-number">02</span>
-            <h3>Dataset landscape</h3>
+            <h3>OctoSense ecosystem</h3>
             <p>
-              Navigate MM-Fi, OctoNet, XRF55, mRI, OPERAnet, and other representative
-              resources using a common comparison framework.
+              See how a unified data abstraction, signal operators, and benchmark
+              engine can move wireless sensing toward ImageNet-style reproducibility.
             </p>
           </article>
 
           <article class="card">
             <span class="card-number">03</span>
-            <h3>Learning paradigms</h3>
+            <h3>Three model paradigms</h3>
             <p>
-              Understand early, intermediate, late, and attention-based fusion,
-              cross-modal supervision, missing-modality robustness, and sensor foundation models.
+              White-box models (RF-CRATE), physics-informed thermal-to-3D learning
+              (TAP3D), and signal-processing–learning co-design (RF-LEGO).
             </p>
           </article>
 
@@ -137,8 +154,8 @@
             <span class="card-number">04</span>
             <h3>Hands-on practice</h3>
             <p>
-              Run and interpret prepared baselines, enable fusion, change or mask a modality,
-              and evaluate performance in a guided notebook.
+              Stream, load, and visualize OctoNet and RF-Behavior modalities with
+              shared notebook workflows you can reuse after the conference.
             </p>
           </article>
         </div>
@@ -148,69 +165,87 @@
     <section id="program" class="section">
       <div class="container">
         <p class="section-label">Representative program</p>
-        <h2>Three hours of lectures, interaction, and practice</h2>
+        <h2>Open datasets, sensing models, and guided practice</h2>
         <p class="section-intro">
-          The exact start time will follow the official UbiComp / ISWC 2026 schedule.
+          Scheduled for the afternoon of Oct 11, 2026 in Room 5I (Floor 5F). Exact start time follows the official UbiComp / ISWC 2026 schedule.
         </p>
 
         <div class="timeline">
           <article class="timeline-item">
-            <time>00:00–00:10</time>
+            <time>00:00–00:20</time>
             <div>
               <h3>Opening</h3>
               <p>Motivation, scope, learning goals, and tutorial format.</p>
+              <p class="speaker">Speaker: Prof. Chenshu Wu</p>
             </div>
           </article>
 
           <article class="timeline-item">
-            <time>00:10–00:40</time>
+            <time>00:20–01:30</time>
             <div>
-              <h3>Module I · Sensing modalities primer</h3>
-              <p>
-                RF, acoustic, thermal, ToF, and inertial sensing, followed by a
-                short signal-inspection checkpoint and live sensor demonstrations.
-              </p>
+              <h3>Module I · Datasets and benchmarks</h3>
+              <ul class="timeline-points">
+                <li>
+                  <strong>Overview</strong> — Sensing modalities, multi-modal dataset trends,
+                  and how representative resources differ and complement one another
+                </li>
+                <li>
+                  <strong>OctoNet</strong> — Practical hosting and access for
+                  heterogeneous multi-modal sensing data
+                  <span class="speaker">Speaker: Dr. Xie Zhang</span>
+                </li>
+                <li>
+                  <strong>RF-Behavior</strong> — Multimodal RF dataset for gestures,
+                  activities, and affective behavior
+                  <span class="speaker">Speaker: Dr. Si Zuo</span>
+                </li>
+                <li>
+                  <strong>OctoSense</strong> — Unified ecosystem for open-source
+                  wireless sensing and reproducible benchmarks
+                  <span class="speaker">Speaker: Mr. Weiying Hou</span>
+                </li>
+              </ul>
             </div>
           </article>
 
           <article class="timeline-item">
-            <time>00:40–01:10</time>
+            <time>01:30–02:30</time>
             <div>
-              <h3>Module II · Datasets and benchmarks</h3>
-              <p>
-                Cross-dataset comparison covering modalities, tasks, scale, labels,
-                synchronization, licensing, and evaluation protocols, followed by
-                a dataset-selection exercise.
-              </p>
-            </div>
-          </article>
-
-          <article class="timeline-item break">
-            <time>01:10–01:25</time>
-            <div>
-              <h3>Coffee break and demo browsing</h3>
-              <p>Informal Q&amp;A and hands-on exploration of representative sensors.</p>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <time>01:25–02:00</time>
-            <div>
-              <h3>Module III · Models and learning paradigms</h3>
-              <p>
-                Per-modality encoders, fusion strategies, cross-modal learning,
-                missing-modality robustness, and a model-comparison checkpoint.
-              </p>
+              <h3>Module II · Models and learning paradigms</h3>
+              <ul class="timeline-points">
+                <li>
+                  <strong>Overview</strong> — A brief review of multi-modal sensing models,
+                  how they differ from vision–language models, and why sensor data needs
+                  dedicated designs
+                </li>
+                <li>
+                  <strong>RF-CRATE</strong> — White-box deep wireless sensing
+                  <span class="speaker">Speaker: Dr. Xie Zhang</span>
+                </li>
+                <li>
+                  <strong>TAP3D</strong> — Physics-informed learning for
+                  thermal-assisted 3D human point cloud generation
+                  <span class="speaker">Speaker: Dr. Xie Zhang</span>
+                </li>
+                <li>
+                  <strong>RF-LEGO</strong> — Signal-processing and learning
+                  co-design via deep unrolling
+                  <span class="speaker">Speaker: Mr. Luca Jiang-Tao Yu</span>
+                </li>
+              </ul>
             </div>
           </article>
 
           <article class="timeline-item emphasis">
-            <time>02:00–02:45</time>
+            <time>02:30–02:45</time>
             <div>
-              <h3>Module IV · Guided hands-on benchmark</h3>
+              <h3>Guided hands-on</h3>
               <p>
-                Load prepared samples, run a baseline, enable fusion, mask or swap
-                a modality, and interpret benchmark metrics using a dataset-agnostic notebook.
+                Workflows for
+                <a href="https://github.com/aiot-lab/OctoNet_demo" target="_blank" rel="noreferrer">OctoNet</a>
+                and
+                <a href="https://huggingface.co/datasets/Si-Z/RF-Behavior" target="_blank" rel="noreferrer">RF-Behavior</a>:
+                streaming download, modality loading, and visualization.
               </p>
             </div>
           </article>
@@ -218,8 +253,9 @@
           <article class="timeline-item">
             <time>02:45–03:00</time>
             <div>
-              <h3>Closing panel</h3>
-              <p>Open research questions, community wishlist, and Q&amp;A.</p>
+              <h3>Closing</h3>
+              <p>Open research questions and discussion.</p>
+              <p class="speaker">Speaker: Prof. Chenshu Wu</p>
             </div>
           </article>
         </div>
@@ -229,37 +265,115 @@
     <section id="materials" class="section muted">
       <div class="container">
         <p class="section-label">Open tutorial materials</p>
-        <h2>Designed for reuse after the conference</h2>
+        <h2>Datasets, platform, and models</h2>
+        <p class="section-intro">
+          Linked resources below are ready to explore. Tutorial slides will be released
+          closer to the conference.
+        </p>
 
-        <div class="cards three">
-          <article class="card">
-            <h3>Hands-on notebook</h3>
+        <p class="resource-group-label">Datasets</p>
+        <div class="cards two">
+          <article class="card resource-card">
+            <div class="resource-media">
+              <img src="images/octonet.webp" alt="OctoNet multi-modal sensing theme figure" loading="lazy" />
+            </div>
+            <h3>OctoNet</h3>
             <p>
-              A self-contained Jupyter/Colab notebook with prepared samples,
-              pretrained checkpoints, modality adapters, fusion, and evaluation.
+              Large-scale multi-modal human activity dataset with motion-capture 3D pose
+              labels; streaming download and visualization via the demo notebook.
             </p>
+            <div class="resource-links">
+              <a href="https://openreview.net/pdf?id=z3TftXOizf" target="_blank" rel="noreferrer">Paper</a>
+              <a href="https://aiot-lab.github.io/OctoNet/" target="_blank" rel="noreferrer">Website</a>
+              <a href="https://huggingface.co/datasets/hku-aiot/OctoNet" target="_blank" rel="noreferrer">Dataset</a>
+              <a href="https://github.com/aiot-lab/OctoNet" target="_blank" rel="noreferrer">Benchmarks</a>
+              <a href="https://github.com/aiot-lab/OctoNet_demo" target="_blank" rel="noreferrer">Demo</a>
+            </div>
           </article>
 
-          <article class="card">
-            <h3>Dataset comparison toolkit</h3>
+          <article class="card resource-card">
+            <div class="resource-media">
+              <img src="images/rf_behavior.jpg" alt="RF-Behavior laboratory sensing setup" loading="lazy" />
+            </div>
+            <h3>RF-Behavior</h3>
             <p>
-              A cross-dataset comparison matrix, dataset-selection checklist,
-              licensing references, and common evaluation template.
+              Multimodal RF dataset (radar, RFID, LoRa, IMU, mocap) for gestures,
+              activities, and affective behavior, from Aalto University.
             </p>
+            <div class="resource-links">
+              <a href="https://arxiv.org/abs/2511.06020" target="_blank" rel="noreferrer">Paper</a>
+              <a href="https://sizuo.github.io/RF-Behavior/" target="_blank" rel="noreferrer">Website</a>
+              <a href="https://huggingface.co/datasets/Si-Z/RF-Behavior" target="_blank" rel="noreferrer">Dataset</a>
+            </div>
           </article>
+        </div>
 
-          <article class="card">
-            <h3>Slides and reading list</h3>
+        <p class="resource-group-label">Platform</p>
+        <div class="cards one">
+          <article class="card resource-card">
+            <h3>OctoSense <span class="badge-soon">Coming soon</span></h3>
             <p>
-              Public slides and a curated reading list covering datasets,
-              benchmark design, fusion, cross-modal learning, and sensing models.
+              A unified open-source wireless sensing ecosystem: data abstraction,
+              standardized signal operators, and a benchmark engine toward
+              ImageNet-style reproducibility. Publication forthcoming.
             </p>
           </article>
         </div>
 
+        <p class="resource-group-label">Models &amp; methods</p>
+        <div class="cards three">
+          <article class="card resource-card">
+            <div class="resource-media resource-media-diagram">
+              <span class="venue-badge">UbiComp&nbsp;2026</span>
+              <img src="images/rf_crate.png" alt="RF-CRATE white-box deep wireless sensing overview" loading="lazy" />
+            </div>
+            <h3>RF-CRATE</h3>
+            <p>
+              White-box deep wireless sensing with fully mathematically derivable
+              architectures across RF modalities.
+            </p>
+            <div class="resource-links">
+              <a href="https://dl.acm.org/doi/10.1145/3831998" target="_blank" rel="noreferrer">Paper</a>
+              <a href="https://github.com/aiot-lab/RF-CRATE" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card resource-card">
+            <div class="resource-media resource-media-diagram">
+              <span class="venue-badge">MobiCom&nbsp;2026</span>
+              <img src="images/tap3d.png" alt="TAP3D thermal array to 3D point cloud theme figure" loading="lazy" />
+            </div>
+            <h3>TAP3D</h3>
+            <p>
+              Physics-informed learning for thermal-assisted 3D human point cloud
+              generation.
+            </p>
+            <div class="resource-links">
+              <a href="https://github.com/aiot-lab/TAP3D" target="_blank" rel="noreferrer">Code</a>
+              <a href="https://www.youtube.com/watch?v=MekRTJPXjKc" target="_blank" rel="noreferrer">Demo</a>
+            </div>
+          </article>
+
+          <article class="card resource-card">
+            <div class="resource-media resource-media-diagram">
+              <span class="venue-badge">MobiCom&nbsp;2026</span>
+              <img src="images/RF_lego.jpg" alt="RF-LEGO modular signal processing and deep learning co-design" loading="lazy" />
+            </div>
+            <h3>RF-LEGO</h3>
+            <p>
+              Modular signal-processing and deep-learning co-design for RF sensing
+              via deep unrolling.
+            </p>
+            <div class="resource-links">
+              <a href="https://arxiv.org/abs/2604.10183" target="_blank" rel="noreferrer">Paper</a>
+              <a href="https://github.com/aiot-lab/RF-LEGO" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+        </div>
+
         <div class="notice">
-          <strong>Materials status:</strong>
-          Tutorial resources are under preparation and will be released before the conference.
+          <strong>Slides:</strong>
+          Tutorial slides are TBA. Datasets, code, and demos are linked above.
         </div>
       </div>
     </section>
@@ -285,10 +399,10 @@
             <li>No prior experience with a specific sensing modality is required</li>
           </ul>
 
-          <h3>What to bring</h3>
+          <h3>Open materials</h3>
           <p>
-            A laptop with Python 3.10+, PyTorch, and approximately 5 GB of free disk space.
-            A fully runnable Google Colab version will also be provided.
+            All tutorial resources are open-sourced and can be downloaded anytime from the
+            <a href="#materials">Materials</a> section—datasets, code, and demos included.
           </p>
         </div>
       </div>
@@ -296,15 +410,17 @@
 
     <section id="organizers" class="section dark">
       <div class="container">
-        <p class="section-label light">Organizers</p>
-        <h2>The University of Hong Kong</h2>
+        <p class="section-label light">People</p>
+        <h2>Organizers &amp; speakers</h2>
 
+        <p class="person-group-label">Organizers</p>
         <div class="organizer-grid">
           <article class="organizer">
             <div class="avatar" aria-hidden="true">XZ</div>
             <div>
               <h3><a href="https://zhang-xie.github.io/" target="_blank" rel="noreferrer">Xie Zhang</a></h3>
-              <p>Spatial sensing intelligence and privacy-preserving multi-modal sensing.</p>
+              <p class="person-role">Postdoctoral Fellow</p>
+              <p class="person-affil">The University of Hong Kong</p>
             </div>
           </article>
 
@@ -312,7 +428,8 @@
             <div class="avatar" aria-hidden="true">WH</div>
             <div>
               <h3><a href="https://houwayne.github.io/" target="_blank" rel="noreferrer">Weiying Hou</a></h3>
-              <p>Wireless sensing systems and low-altitude technologies.</p>
+              <p class="person-role">Ph.D. Candidate</p>
+              <p class="person-affil">The University of Hong Kong</p>
             </div>
           </article>
 
@@ -320,7 +437,29 @@
             <div class="avatar" aria-hidden="true">CW</div>
             <div>
               <h3><a href="https://www.cswu.me/" target="_blank" rel="noreferrer">Chenshu Wu</a></h3>
-              <p>AIoT, wireless sensing, mobile systems, and ubiquitous computing.</p>
+              <p class="person-role">Associate Professor</p>
+              <p class="person-affil">The University of Hong Kong</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="person-group-label speakers-label">Featured speakers</p>
+        <div class="organizer-grid">
+          <article class="organizer">
+            <div class="avatar" aria-hidden="true">SZ</div>
+            <div>
+              <h3><a href="https://www.aalto.fi/en/people/si-zuo" target="_blank" rel="noreferrer">Si Zuo</a></h3>
+              <p class="person-role">Postdoctoral Researcher</p>
+              <p class="person-affil">Aalto University</p>
+            </div>
+          </article>
+
+          <article class="organizer">
+            <div class="avatar" aria-hidden="true">LY</div>
+            <div>
+              <h3><a href="https://lucayu.me/" target="_blank" rel="noreferrer">Luca Jiang-Tao Yu</a></h3>
+              <p class="person-role">Ph.D. Student</p>
+              <p class="person-affil">The University of Hong Kong</p>
             </div>
           </article>
         </div>

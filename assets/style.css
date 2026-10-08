@@ -138,7 +138,7 @@ h2 {
 h1 {
   max-width: 900px;
   margin: 0;
-  font-size: clamp(2.65rem, 6vw, 5.2rem);
+  font-size: clamp(2.35rem, 4.6vw, 4.15rem);
   line-height: 1.02;
 }
 
@@ -315,11 +315,6 @@ h3 {
 
 .cards.two {
   grid-template-columns: repeat(2, 1fr);
-}
-
-.cards.one {
-  grid-template-columns: 1fr;
-  max-width: 640px;
 }
 
 .card {

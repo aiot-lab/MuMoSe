@@ -278,6 +278,33 @@ h3 {
   padding: 88px 0;
 }
 
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.group-photo {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.group-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.group-photo figcaption {
+  padding: 14px 18px 16px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .section.muted {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -588,7 +615,14 @@ h3 {
   font-size: 0.9rem;
 }
 
-.person-role {
+.person-tag {
+  margin: 0 0 4px;
+  color: #a9baff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
   margin-bottom: 2px !important;
   color: #e8ecf5 !important;
   font-size: 0.92rem !important;
@@ -662,8 +696,9 @@ footer {
   .cards.four,
   .cards.three,
   .cards.two,
-  .organizer-grid {
-    grid-template-columns: 1fr 1fr;
+  .organizer-grid,
+  .photo-row {
+    grid-template-columns: 1fr;
   }
 
   nav {
